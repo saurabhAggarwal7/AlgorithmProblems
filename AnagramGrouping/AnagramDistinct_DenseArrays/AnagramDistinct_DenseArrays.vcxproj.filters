@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AnagramGrp_DenseArray_Map.cpp">
+    <ClCompile Include="..\AnagramDistinct(DenseArray)\AnagramDistinct_DenseArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

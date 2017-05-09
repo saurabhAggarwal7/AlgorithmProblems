@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{212EEB27-0985-418B-ADF0-3D34E9F54C17}</ProjectGuid>
-    <RootNamespace>AnagramGrouping</RootNamespace>
+    <ProjectGuid>{87C44AD7-2888-41A2-BED7-7ADB38202B3A}</ProjectGuid>
+    <RootNamespace>AnagramDistinct_DenseArrays</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -64,7 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AnagramGrp_DenseArray_Map.cpp" />
+    <ClCompile Include="..\AnagramDistinct(DenseArray)\AnagramDistinct_DenseArray.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

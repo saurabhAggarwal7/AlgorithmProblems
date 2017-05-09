@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnagramGrouping", "AnagramGrouping\AnagramGrouping.vcxproj", "{212EEB27-0985-418B-ADF0-3D34E9F54C17}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnagramDistinct_Maps", "AnagramDistinct(DenseArray)\AnagramDistinct(DenseArray).vcxproj", "{CE5B9083-E179-4C7C-867B-3B195C3611BB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnagramDistinct_DenseArrays", "AnagramDistinct_DenseArrays\AnagramDistinct_DenseArrays.vcxproj", "{87C44AD7-2888-41A2-BED7-7ADB38202B3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,6 +17,14 @@ Global
 		{212EEB27-0985-418B-ADF0-3D34E9F54C17}.Debug|Win32.Build.0 = Debug|Win32
 		{212EEB27-0985-418B-ADF0-3D34E9F54C17}.Release|Win32.ActiveCfg = Release|Win32
 		{212EEB27-0985-418B-ADF0-3D34E9F54C17}.Release|Win32.Build.0 = Release|Win32
+		{CE5B9083-E179-4C7C-867B-3B195C3611BB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CE5B9083-E179-4C7C-867B-3B195C3611BB}.Debug|Win32.Build.0 = Debug|Win32
+		{CE5B9083-E179-4C7C-867B-3B195C3611BB}.Release|Win32.ActiveCfg = Release|Win32
+		{CE5B9083-E179-4C7C-867B-3B195C3611BB}.Release|Win32.Build.0 = Release|Win32
+		{87C44AD7-2888-41A2-BED7-7ADB38202B3A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{87C44AD7-2888-41A2-BED7-7ADB38202B3A}.Debug|Win32.Build.0 = Debug|Win32
+		{87C44AD7-2888-41A2-BED7-7ADB38202B3A}.Release|Win32.ActiveCfg = Release|Win32
+		{87C44AD7-2888-41A2-BED7-7ADB38202B3A}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

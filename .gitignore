@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+Debug
+
+# ignore local visual studio files
+*.opensdf
+*.sdf
+*.suo
+*.lastbuildstate
+

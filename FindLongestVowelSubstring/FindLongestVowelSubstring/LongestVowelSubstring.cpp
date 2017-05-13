@@ -10,7 +10,6 @@ int main()
 	int count_index = 0;
 	int max=0;
 	int max_index =0;
-	std::map<string,int> start_map;
 	int arr[26];
 
 	//all index value 0's:

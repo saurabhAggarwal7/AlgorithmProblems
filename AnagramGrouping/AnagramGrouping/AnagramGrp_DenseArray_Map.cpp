@@ -5,7 +5,9 @@
 #include <stdlib.h>
 using namespace std;
 
-void create_denseArray(string start, std::map<string, list<string>> &start_map) {
+void update_Groupedmap(string start, std::map<string, list<string>> &start_map) {
+
+	//create dense array:
 	int benchmark_ascii = int('a');
 	int dense_array[30];
 	for (int i = 0; i < start.size(); i++){
@@ -17,6 +19,8 @@ void create_denseArray(string start, std::map<string, list<string>> &start_map) 
 		else
 		dense_array[index] = 1;
 	}
+
+	//create symbol
 	string symbol;
 	for (int i = 0; i < sizeof(dense_array)/sizeof(dense_array[0]); i++){
 		if(dense_array[i] > 0)
@@ -26,6 +30,7 @@ void create_denseArray(string start, std::map<string, list<string>> &start_map) 
 		}
 	}
 
+	//update map by reference '&'
 	int key_Count = start_map.count(symbol);
 	if(key_Count > 0)
 	{
@@ -41,10 +46,11 @@ void create_denseArray(string start, std::map<string, list<string>> &start_map) 
 
 string group_anagrams(list<string> inputLst) {
 	std::map<string,list<string>> start_map;
-	string result;
 	  list<string>::iterator i;
+
+	  //update map by reference
 	  for(i = inputLst.begin(); i != inputLst.end(); ++i){
-			create_denseArray(*i, start_map);
+			update_Groupedmap(*i, start_map);
 	  }
 
 	  //Print: 

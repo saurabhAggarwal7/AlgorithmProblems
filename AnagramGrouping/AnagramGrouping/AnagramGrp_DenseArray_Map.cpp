@@ -2,11 +2,10 @@
 #include <string>
 #include <map>
 #include "list" 
-#include "sstream" 
-#include "iterator" 
+#include <stdlib.h>
 using namespace std;
 
-int* create_denseArray(string start) {
+void create_denseArray(string start, std::map<string, list<string>> &start_map) {
 	int benchmark_ascii = int('a');
 	int dense_array[30];
 	for (int i = 0; i < start.size(); i++){
@@ -18,19 +17,46 @@ int* create_denseArray(string start) {
 		else
 		dense_array[index] = 1;
 	}
-	return dense_array;
+	string symbol;
+	for (int i = 0; i < sizeof(dense_array)/sizeof(dense_array[0]); i++){
+		if(dense_array[i] > 0)
+		{
+			string charSymbol = std::to_string(i) + ":" + std::to_string(dense_array[i]) + '|';
+			symbol += charSymbol;
+		}
+	}
+
+	int key_Count = start_map.count(symbol);
+	if(key_Count > 0)
+	{
+		start_map[symbol].push_back(start);
+	}
+	else
+	{
+		list<string> lst;
+		lst.push_back(start);
+		start_map.insert (std::pair<string,list<string>>(symbol,lst));
+	}
 }
 
 string group_anagrams(list<string> inputLst) {
+	std::map<string,list<string>> start_map;
+	string result;
+	  list<string>::iterator i;
+	  for(i = inputLst.begin(); i != inputLst.end(); ++i){
+			create_denseArray(*i, start_map);
+	  }
 
-	  //create dense arrays from each index of this list
-	  list<string>::iterator i = inputLst.begin();
-      int* dense_array1 = create_denseArray(*i);
-	
+	  //Print: 
+	  for(map<string,list<string>>::iterator it = start_map.begin(); it != start_map.end(); ++it) {
+		  string grouped;
+		  for(i = it->second.begin(); i != it->second.end(); ++i){
+			  grouped = grouped + ' '+ *i;
+		  }
+		  cout<<"Group "<<grouped<<"\n";
+	  }
 	return "";
 }
-
-
 
 int main() {
 
@@ -43,6 +69,7 @@ int main() {
 	inputLst.push_back ("tca");
 
 	string result = group_anagrams(inputLst);
-	cout<<"Result"<<result;
+	cout<<result;
+	getchar();
 	return 0;
 }

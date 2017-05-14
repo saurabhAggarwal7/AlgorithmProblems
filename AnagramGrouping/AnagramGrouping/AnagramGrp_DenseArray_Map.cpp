@@ -17,7 +17,7 @@ void update_Groupedmap(string start, std::map<string, list<string>> &start_map) 
 			dense_array[index] += 1;
 		}
 		else
-		dense_array[index] = 1;
+			dense_array[index] = 1;
 	}
 
 	//create symbol
@@ -46,21 +46,21 @@ void update_Groupedmap(string start, std::map<string, list<string>> &start_map) 
 
 string group_anagrams(list<string> inputLst) {
 	std::map<string,list<string>> start_map;
-	  list<string>::iterator i;
+	list<string>::iterator i;
 
-	  //update map by reference
-	  for(i = inputLst.begin(); i != inputLst.end(); ++i){
-			update_Groupedmap(*i, start_map);
-	  }
+	//update map by reference
+	for(i = inputLst.begin(); i != inputLst.end(); ++i){
+		update_Groupedmap(*i, start_map);
+	}
 
-	  //Print: 
-	  for(map<string,list<string>>::iterator it = start_map.begin(); it != start_map.end(); ++it) {
-		  string grouped;
-		  for(i = it->second.begin(); i != it->second.end(); ++i){
-			  grouped = grouped + ' '+ *i;
-		  }
-		  cout<<"Group "<<grouped<<"\n";
-	  }
+	//Print: 
+	for(map<string,list<string>>::iterator it = start_map.begin(); it != start_map.end(); ++it) {
+		string grouped;
+		for(i = it->second.begin(); i != it->second.end(); ++i){
+			grouped = grouped + ' '+ *i;
+		}
+		cout<<"Group "<<grouped<<"\n";
+	}
 	return "";
 }
 

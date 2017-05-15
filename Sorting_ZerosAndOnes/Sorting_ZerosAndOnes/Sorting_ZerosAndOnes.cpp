@@ -13,12 +13,12 @@ int main()
 	while (left_index < right_index)
 	{
 		//{ End to First: n-1 to 1 }
-		while (arr[right_index] == 1){
+		while (arr[right_index] == upper_bound){
 			right_index--;
 		}
 
 		//{ Move Forward: 1 to n-1 }
-		while (arr[left_index] == 0){
+		while (arr[left_index] == lower_bound){
 			left_index++;
 		}
 
